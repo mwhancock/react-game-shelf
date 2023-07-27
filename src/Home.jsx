@@ -1,3 +1,5 @@
+import Gallery from "./Gallery"
+
 export default function Home() {
     return (
         <>
@@ -14,6 +16,7 @@ export default function Home() {
                         <section id="search_results" className="grid-box games"></section>
                     </section>
                 </section>
+                <Gallery />
             </div>
         </>
     )
