@@ -1,4 +1,5 @@
 import Gallery from "./Gallery"
+import Library from "./Library"
 
 export default function Home() {
     return (
@@ -17,6 +18,7 @@ export default function Home() {
                     </section>
                 </section>
                 <Gallery />
+                <Library />
             </div>
         </>
     )
