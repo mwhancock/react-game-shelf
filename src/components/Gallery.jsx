@@ -11,7 +11,7 @@ export default function Gallery() {
             </button>
 
             <button className="next-btn">
-                <span className="materal-symbols-outlined">arrow_forward_ios</span>
+                <span className="material-symbols-outlined">arrow_forward_ios</span>
             </button>
         </div>
         </>
