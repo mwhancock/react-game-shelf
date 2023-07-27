@@ -1,11 +1,11 @@
 import './App.css';
-import Nav from './Nav.jsx';
+import Body from './Body';
 
 function App() {
   return (
-   <>
-    <Nav />
-   </>
+    <>
+      <Body />
+    </>
   );
 }
 
