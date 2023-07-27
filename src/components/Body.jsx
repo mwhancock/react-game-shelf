@@ -1,6 +1,7 @@
 import Dialog from "./Dialog"
 import Nav from "./Nav"
 import Home from "./Home"
+import Footer from "./Footer"
 
 export default function Body() {
     return (<>
@@ -8,6 +9,7 @@ export default function Body() {
          <Dialog />
          <Nav />
          <Home />
+         <Footer />
         </main>
     </>)
 }
