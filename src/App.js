@@ -1,9 +1,10 @@
 import './App.css';
+import Nav from './Nav.jsx';
 
 function App() {
   return (
    <>
-    <h1>Game Shelf</h1>
+    <Nav />
    </>
   );
 }
