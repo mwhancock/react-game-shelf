@@ -3,7 +3,7 @@ export default function Nav() {
         <>
             <nav className="nav-box" aria-label="primary-navigation">
                 <div className="logo">
-                    <a href="index.html"><img src={require("../img/logo.png")} alt="company logo" className="logo-img" /></a>
+                    <a href="index.html"><img src={require("../../img/logo.png")} alt="company logo" className="logo-img" /></a>
                 </div>
                 <div className="search_wrapper">
                     <input type="text" className="text_field" id="search_bar"  placeholder="Search..."/>
@@ -14,4 +14,5 @@ export default function Nav() {
             </nav>
         </>
     );
-    }
+}
+

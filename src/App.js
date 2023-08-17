@@ -1,11 +1,20 @@
+import 'bootstrap/dist/css/bootstrap.css';
+
 import React from 'react';
 import './App.css';
-import Body from './components/Body';
+import { Home } from './pages';
+import { Dialog } from './components/home';
+import { Route, Routes } from "react-router-dom"
 
 function App() {
   return (
     <>
-      <Body />
+      <main className="grid-box main-grid">
+        <Dialog />
+        <Routes>
+            <Route path="/" element={< Home />} />
+        </Routes>
+      </main>
     </>
   );
 }
