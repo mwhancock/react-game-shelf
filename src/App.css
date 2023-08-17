@@ -1,4 +1,6 @@
 /* GLOBAL VARIABLES */
+
+
 :root{
     --accent-color: #825574;
     --alt-accent-color: #CFB0C5;
@@ -142,17 +144,17 @@
   }
   
   
-  .feature-name, .feature-des{
+  /* .feature-name, .feature-des{
     border: var(--text-color);
     color: var(--text-color);
-  }
+  } */
   
   .feature-card {
     /* cursor: pointer; */
     display: flex;
     justify-content: center;
     height: 40rem;
-    width: 93%;
+    width: 100%;
     overflow: hidden;
     position: absolute;
   }
@@ -167,33 +169,34 @@
     padding: 0 1rem;
     position: relative;
     margin: 0 auto;
+    margin-top: 5rem;
     width: 72%;
   }
   
-  .gallery-img{
+  /* .gallery-img{
     border-radius: var(--main-border-radius);
     box-shadow: 3px 3px 7px var(--alt-accent-color);
     height: 16rem;
     width: 16rem;
     object-fit: cover;
     margin-top: .95rem;
-  }
+  } */
   
   .featured{
-    margin-top: -1rem;
+    margin-top: 7rem;
   }
   
   
-  .feature-des{
+  /* .feature-des{
     text-align: left;
     margin-bottom: 1rem;
     height: 20rem;
     overflow: hidden;
     white-space: wrap;
     text-overflow: ellipsis;
-  }
+  } */
   
-  .feature-add-btn{
+  /* .feature-add-btn{
     position: absolute;
     background: var(--accent-color);
     box-shadow: var(--box-shadow);
@@ -214,7 +217,7 @@
     background: var(--alt-accent-color);
     color: var(--text-color);
     cursor: pointer;
-  }
+  } */
   
   .material-symbols-outlined {
     font-variation-settings:
@@ -223,19 +226,19 @@
     'GRAD' 0,
     'opsz' 48
   }
-  
+/*   
   .next-btn{
     right: .25rem;
   }
   
   .prev-btn{
     left: .25rem;
-  }
+  } */
   
   /* MAIN BODY */
   
   .page-content{
-    margin-top: 7rem;
+    /* margin-top: 7rem; */
     width: 100vw;
   }
   
@@ -426,6 +429,10 @@
   .active{
     display: block;
   }
+
+  .inactive {
+    display: none;
+  }
   
   .recommend {
     margin-top: 2.5rem;
@@ -601,7 +608,7 @@
   
     .feature-card {
       height: 25rem;
-      width: 90%;
+      width: 98%;
     } 
   
     .games{
@@ -637,10 +644,10 @@
       margin-top: 5.2rem;
     }
   
-    .feature-name{
-      margin-left: 59%;
-      margin-top: -20rem;
-      }
+    /* .feature-name{
+      margin-left: 100%;
+      margin-top: 1rem;
+      } */
   
     .feature-des{
       width: 40%;
@@ -756,19 +763,19 @@
       height: 47%;
       width: 35%;
     }
-  
+/*   
     .feature-name{
       margin-left: 27rem;
-    }
+    } */
   
-    .gallery-img{
+    /* .gallery-img{
       margin-left: -34rem;
     }
   
     .feature-des{
-      /* width: 0%; */
-      margin-left: 49%;
-    }
+       width: 0%; 
+       margin-left: 49%; 
+ } */
   
     .preview-img{
       width: 16rem;
@@ -780,7 +787,7 @@
   
     .add-btn{
       margin-left: 60%;
-    }
+    } 
   
     .lib-games{
       grid-template-columns: repeat(6, 1fr);
@@ -846,12 +853,12 @@
       }
   
       .feature-name{
-        margin-left: 33rem;
+        margin-left: 45%;
       }
   
       .feature-des{
-        width: 44%;
-        margin-left: 34.9rem;
+        width: 100%;
+        margin-left: 15%;
       }
   
       .gallery{
@@ -859,7 +866,7 @@
       }
   
       .gallery-img{
-        width: 30rem;
+        width: 37rem;
         margin-left: -35.7rem;
       }
   

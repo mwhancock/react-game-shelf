@@ -1,5 +1,4 @@
-import Gallery from "./Gallery"
-import Library from "./Library"
+import { Gallery, Library, Nav, Footer } from "../components/home"
 
 export default function Home() {
     return (
@@ -17,8 +16,10 @@ export default function Home() {
                         <section id="search_results" className="grid-box games"></section>
                     </section>
                 </section>
+                <Nav />
                 <Gallery />
                 <Library />
+                <Footer />
             </div>
         </>
     )
