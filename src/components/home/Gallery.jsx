@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { getHotIds, getGameDetails } from "../BGGApi";
 
 const GameCard = ({ game, isActive }) => {
+  // let description = game[0].description.replace(/.&#10;&#10;/g, ".").replace(/&mdash;description from the publishe./g, "").replace(/&mdash;/g, "-");
   return (
     <div className="card lg:card-side bg-base-100 shadow-xl">
       <figure><img src={game[0].image}  alt="box cover"/></figure>
       <div className="card-body">
         <h2 className="card-title">{game[0].name}</h2>
-        <p>{game[0].description}</p>
+        <p dangerouslySetInnerHTML={{ __html: game[0].description }}></p>
         <div className="card-actions justify-end">
           <button className="btn btn-primary">View page</button>
         </div>
