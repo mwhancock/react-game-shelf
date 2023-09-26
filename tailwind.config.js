@@ -10,6 +10,7 @@ module.exports = {
       'accent': '#825574',
       'alt-accent': '#cfb0c5',
       'bg-color': '#fff4e0',
+      'btn-text': '#f3f3c7',
       'dark-green': '#8dac87',
       'light-green': '#b4cfb0c4',
       'logo-color': '#263330',

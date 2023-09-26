@@ -10,7 +10,7 @@ export default function Nav() {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
                 <form class="d-flex tw-w-[50%] tw-ml-[27rem] tw-drop-shadow-md" role="search">
                     <input className="form-control me-2 tw-rounded-[20px]" type="search" placeholder="Search..." aria-label="Search" />
-                    <button className="btn btn-outline-success tw-bg-alt-accent tw-text-text-color  hover:tw-bg-accent tw-border-none" type="submit">Search</button>
+                    <button className="btn btn-outline-success tw-bg-alt-accent tw-text-text-color hover:tw-text-btn-text  hover:tw-bg-accent tw-border-none" type="submit">Search</button>
                 </form>
             </div>
         </div>
