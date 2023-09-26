@@ -1,18 +1,20 @@
 export default function Nav() {
-    return (
-        <>
-            <nav className="nav-box" aria-label="primary-navigation">
-                <div className="logo">
-                    <a href="index.html"><img src={require("../../img/logo.png")} alt="company logo" className="logo-img" /></a>
-                </div>
-                <div className="search_wrapper">
-                    <input type="text" className="text_field" id="search_bar"  placeholder="Search..."/>
-                    <button id="search_button" >
-                        <span className="material-symbols-outlined">search</span>
-                    </button>
-                </div>
-            </nav>
-        </>
-    );
+  return (
+  <>
+    <nav className="navbar navbar-expand-lg tw-bg-dark-green tw-h-20 tw-shadow-box-shadow tw-sticky tw-top-0 tw-z-50">
+        <div className="container-fluid">
+            <a className="navbar-brand" href="../../App.js"><img src="../../img/logo.png" alt="" />Logo</a>
+            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex tw-w-[50%] tw-ml-[27rem] tw-drop-shadow-md" role="search">
+                    <input className="form-control me-2 tw-rounded-[20px]" type="search" placeholder="Search..." aria-label="Search" />
+                    <button className="btn btn-outline-success tw-bg-alt-accent tw-text-text-color  hover:tw-bg-accent tw-border-none" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+</>
+  )
 }
-
