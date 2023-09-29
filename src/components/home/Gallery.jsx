@@ -5,13 +5,13 @@ const GameCard = ({ game,isActive }) => {
    
   return (
     <>
-      <div id={game[0].id} className={`carousel-item card lg:card-side tw-rounded-lg tw-bg-base-100 tw-shadow-xl ${isActive ? "active" : ""}`}>
-        <figure><img className="d-block w-100 h-50" src={game[0].image}  alt="box cover"/></figure>
+      <div data-theme="light"  id={game[0].id} className={`carousel-item card relative lg:card-side rounded-lg bg-light-green shadow-xl w-3/4 mt-10 h-96 ${isActive ? "active" : ""}`}>
+        <figure><img className="w-96 h-80" src={game[0].image}  alt="box cover"/></figure>
         <div className="card-body">
           <h2 className="card-title">{game[0].name}</h2>
           <p dangerouslySetInnerHTML={{ __html: game[0].description }}></p>
-          <div className="tw-card-actions tw-justify-end">
-            <button className="btn tw-btn-primary tw-font-black tw-text-xl tw-bg-accent tw-text-btn-text hover:tw-text-text-color  hover:tw-bg-alt-accent tw-border-none">+</button>
+          <div className="card-actions justify-end">
+            <button className="py-1.5 px-3.5 ml-2 rounded-md font-black text-3xl bg-accent text-btn-text hover:text-text-color  hover:bg-alt-accent border-none eas-in duration-150">+</button>
           </div>
         </div>
       </div>
@@ -56,21 +56,20 @@ export default function Gallery() {
   return (
     <>
       <div className="label featured">
-        <h2>Feaured</h2>
+        <h2 className="text-center text-3xl font-bold">Feaured</h2>
       </div>
       <hr />
-      <div id="gallery" className="carousel slide">
+      <div id="gallery" className="carousel w-full">
         <div className="carousel-inner">
           {games.slice(0, 15).map((game) => (
             <GameCard key={game.id} game={game} isActive={cardIndex}/>
             ))}
           <button className="carousel-control-next" type="button" data-bs-target="#gallery" data-bs-slide="next" onClick={incrementCardIndex}>
-              <span className="carousel-control-next-icon" aria-hidden="true"></span>
-              <span className="visually-hidden">Next</span>
+              <span className="btn btn-circle" aria-hidden="true"></span>
+              <span className="">❯</span>
           </button> 
-          <button className="carousel-control-prev" type="button" data-bs-target="#gallery" data-bs-slide="prev" onClick={decrementCardIndex}>
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Previous</span>
+          <button className="btn btn-circle" type="button" data-bs-target="#gallery" data-bs-slide="prev" onClick={decrementCardIndex}>
+            <span className="" aria-hidden="true">❮</span>
           </button>
         </div>
       </div>
