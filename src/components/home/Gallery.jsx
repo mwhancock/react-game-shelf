@@ -1,40 +1,55 @@
 import { useEffect, useState } from "react";
 import { getHotIds, getGameDetails } from "../BGGApi";
 
-const GameCard = ({ game, isActive }) => {
+const GameCard = ({ game,isActive }) => {
+   
   return (
-    <div className="card lg:card-side bg-base-100 shadow-xl">
-      <figure><img src={game[0].image}  alt="box cover"/></figure>
-      <div className="card-body">
-        <h2 className="card-title">{game[0].name}</h2>
-        <p dangerouslySetInnerHTML={{ __html: game[0].description }}></p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary tw-font-black tw-text-xl tw-border-none tw-bg-accent tw-text-btn-text hover:tw-bg-alt-accent hover:tw-text-text-color">+</button>
-        </div>
-      </div>
-    </div>
+    <>
+   
+      <div id={game[0].id} className={`carousel-item card ${isActive ? "active" : ""}`}>
+          <figure><img className="d-block w-100 h-50" src={game[0].image}  alt="box cover"/></figure>
+            <h2 className="card-title">{game[0].name}</h2>
+            <p dangerouslySetInnerHTML={{ __html: game[0].description }}></p>
+            <div>
+              <button className="btn btn-primary tw-font-black tw-text-xl tw-border-none tw-bg-accent tw-text-btn-text hover:tw-bg-alt-accent hover:tw-text-text-color">+</button>
+            </div>
+          </div>
+    </>
   );
 };
 
 export default function Gallery() {
   const [games, setGames] = useState([]);
-  const [index, setIndex] = useState(0);
+  const [cardIndex, setCardIndex] = useState(0);
 
   useEffect(() => {
-    getHotIds().then((hotlist) => {
-    const promises = hotlist.map((id) => getGameDetails(id));
+    getHotIds().then((hotList) => {
+    const promises = hotList.map((id) => getGameDetails(id));
     Promise.all(promises).then((game) => {
       setGames(game);
     });
   });
   }, []);
 
-  const fwdSlide = () => {
-    setIndex((prevIndex) => (prevIndex < games.length - 1 ? prevIndex + 1 : 0));
+  useEffect(() => {
+    const carousel = document.querySelector("#gallery");
+    const slides = carousel.querySelectorAll(".carousel-item");
+
+    slides.forEach((slide, index) => {
+      if (index === cardIndex) {
+        slide.classList.add("active");
+      } else {
+        slide.classList.remove("active");
+      }
+    });
+  }, [cardIndex]);
+
+  const incrementCardIndex = () => {
+    setCardIndex((prevIndex) => (prevIndex < 14 ? prevIndex + 1 : 0));
   };
 
-  const bwdSlide = () => {
-    setIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : games.length - 1));
+  const decrementCardIndex = () => {
+    setCardIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : 14));
   };
 
   return (
@@ -43,18 +58,19 @@ export default function Gallery() {
         <h2>Feaured</h2>
       </div>
       <hr />
-      <div id="gallery" className="gallery">
-        <button className="prev-btn" onClick={bwdSlide}>
-          <span className="material-symbols-outlined">arrow_back_ios</span>
-        </button>
-
-        <button className="next-btn" onClick={fwdSlide}>
-          <span className="material-symbols-outlined">arrow_forward_ios</span>
-        </button>
-        <div>
+      <div id="gallery" className="carousel slide">
+        <div className="carousel-inner">
           {games.slice(0, 15).map((game) => (
-            <GameCard key={game.id} game={game} isActive={index} />
-          ))}
+            <GameCard key={game.id} game={game} isActive={cardIndex}/>
+            ))}
+          <button className="carousel-control-next" type="button" data-bs-target="#gallery" data-bs-slide="next" onClick={incrementCardIndex}>
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Next</span>
+          </button> 
+          <button className="carousel-control-prev" type="button" data-bs-target="#gallery" data-bs-slide="prev" onClick={decrementCardIndex}>
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
         </div>
       </div>
     </>
