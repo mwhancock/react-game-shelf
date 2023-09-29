@@ -5,15 +5,16 @@ const GameCard = ({ game,isActive }) => {
    
   return (
     <>
-   
-      <div id={game[0].id} className={`carousel-item card ${isActive ? "active" : ""}`}>
-          <figure><img className="d-block w-100 h-50" src={game[0].image}  alt="box cover"/></figure>
-            <h2 className="card-title">{game[0].name}</h2>
-            <p dangerouslySetInnerHTML={{ __html: game[0].description }}></p>
-            <div>
-              <button className="btn btn-primary tw-font-black tw-text-xl tw-border-none tw-bg-accent tw-text-btn-text hover:tw-bg-alt-accent hover:tw-text-text-color">+</button>
-            </div>
+      <div id={game[0].id} className={`carousel-item card lg:card-side tw-rounded-lg tw-bg-base-100 tw-shadow-xl ${isActive ? "active" : ""}`}>
+        <figure><img className="d-block w-100 h-50" src={game[0].image}  alt="box cover"/></figure>
+        <div className="card-body">
+          <h2 className="card-title">{game[0].name}</h2>
+          <p dangerouslySetInnerHTML={{ __html: game[0].description }}></p>
+          <div className="tw-card-actions tw-justify-end">
+            <button className="btn tw-btn-primary tw-font-black tw-text-xl tw-bg-accent tw-text-btn-text hover:tw-text-text-color  hover:tw-bg-alt-accent tw-border-none">+</button>
           </div>
+        </div>
+      </div>
     </>
   );
 };
