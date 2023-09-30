@@ -32,18 +32,21 @@ export default function Gallery() {
   });
   }, []);
 
+
   useEffect(() => {
     const carousel = document.querySelector("#gallery");
     const slides = carousel.querySelectorAll(".carousel-item");
-
-    slides.forEach((slide, index) => {
-      if (index === cardIndex) {
-        slide.classList.remove("hidden");
-      } else {
-        slide.classList.add("hidden");
-      }
-    });
-  }, [cardIndex]);
+  
+    if (slides.length > 0) {
+      slides.forEach((slide, index) => {
+        if (index === cardIndex) {
+          slide.classList.remove("hidden");
+        } else {
+          slide.classList.add("hidden");
+        }
+      });
+    }
+  }, [cardIndex, games]);
 
   const incrementCardIndex = () => {
     setCardIndex((prevIndex) => (prevIndex < 14 ? prevIndex + 1 : 0));
