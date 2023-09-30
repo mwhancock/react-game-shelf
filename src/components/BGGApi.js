@@ -29,7 +29,7 @@ const getGameDetails = async (gameID) => {
             id: gameID,
             name: game.querySelector("name").getAttribute("value"),
             image: game.querySelector("image").textContent.trim(),
-            description: game.querySelector("description").textContent.trim(),
+            description: game.querySelector("description").textContent.trim()
           }
         })
         return gameObj;

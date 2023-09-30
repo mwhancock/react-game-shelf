@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  prefix: 'tw-',
   content: [
     './src/**/*.{html,ts,css,js,jsx,tsx}',
     
@@ -10,6 +9,7 @@ module.exports = {
       'accent': '#825574',
       'alt-accent': '#cfb0c5',
       'bg-color': '#fff4e0',
+      'btn-text': '#f3f3c7',
       'dark-green': '#8dac87',
       'light-green': '#b4cfb0c4',
       'logo-color': '#263330',
@@ -26,7 +26,10 @@ module.exports = {
   corePlugins: {
     preflight: false,
   },
-  plugins: [],
-}
+  plugins: [require('daisyui')],
+},
+  daisyui: {
+    themes: ["light"],
+  },
 }
 
