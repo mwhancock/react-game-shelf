@@ -3,7 +3,7 @@ import { Gallery, Library, } from "../components/home"
 export default function Home() {
     return (
         <>
-            <div className="justify-center grid-cols-1">
+            <div className="flex flex-col justify-center">
                 <section id="home" className="">
                     <section id="result_content" className="hidden">
                         <div className="">
