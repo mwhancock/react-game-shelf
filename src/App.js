@@ -2,7 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import './App.css';
 import { Home } from './pages';
-import { Dialog, Footer, Nav } from './components/home';
+import { Dialog, Footer } from './components/home';
+import { Nav } from './components/shared';
 import { Route, Routes } from "react-router-dom"
 
 function App() {

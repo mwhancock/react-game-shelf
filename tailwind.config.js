@@ -20,8 +20,12 @@ module.exports = {
         'br-main': '20px',
     },
       boxShadow: {
-        'box-shadow': '0 0 20px #384541',
-      }
+        'box-shadow': '0 0 2px #384541',
+        'image-shadow': '3px 3px 7px #cfb0c5',
+      },
+      fontFamily: {
+        'sans': ['Montserrat', 'sans-serif'],
+      },
   },
   corePlugins: {
     preflight: false,
