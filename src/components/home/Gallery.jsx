@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getHotIds, getGameDetails } from "../functions/BGGApi";
+import { getHotIds, getGameDetails } from "../functions/BGGHotlist";
 
 const GameCard = ({ game,isActive }) => {
    
