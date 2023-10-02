@@ -5,7 +5,7 @@ export default function Home() {
         <>
             <div className="flex flex-col justify-center">
                 <section id="home" className="">
-                    <section id="result_content" className="hidden">
+                    <section id="result-content" className="hidden">
                         <div className="">
                             <div>
                                 <h2>Search Results</h2>
@@ -13,7 +13,7 @@ export default function Home() {
                             <hr />
                             <button id="close-search" className="">X</button>
                         </div>
-                        <section id="search_results" className=""></section>
+                        <section id="search-results" className=""></section>
                     </section>
                 </section>
             

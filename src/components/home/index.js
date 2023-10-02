@@ -1,7 +1,7 @@
 import Dialog from "./Dialog";  
-import Footer from "..shared/Footer";
+import Footer from "./Footer";
 import Gallery from "./Gallery";
 import Library from "./Library";
-import Nav from "../shared/Nav";    
+import Nav from "./Nav";    
 
 export { Dialog, Footer, Gallery, Library, Nav };
