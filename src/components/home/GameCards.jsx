@@ -9,8 +9,9 @@ const GalleryCard = ({ game }) => {
           <div className="card-body">
             <h2 className="ml-20 card-title text-text-color text-2xl">{game[0].name}</h2>
             <p className="ml-20 line-clamp-[7] w-[33rem] leading-6 text-text-color font-light" dangerouslySetInnerHTML={{ __html: game[0].description }}></p>
+            <button className="absolute top-4 right-[2%] py-1.5 px-3.5 ml-2 rounded-md shadow-box-shadow font-black text-3xl bg-accent text-btn-text hover:text-text-color  hover:bg-alt-accent border-none eas-in duration-150">+</button>
             <div className="card-actions justify-end">
-              <button className="absolute top-4 right-[2%] py-1.5 px-3.5 ml-2 rounded-md shadow-box-shadow font-black text-3xl bg-accent text-btn-text hover:text-text-color  hover:bg-alt-accent border-none eas-in duration-150">+</button>
+              <button className="bg-action-btn p-1 shadow-box-shadow relative mb-[-2%] hover:bg-action-btn-hover rounded-md ease-in font-light duration-150">Game page</button>
             </div>
           </div>
         </div>
