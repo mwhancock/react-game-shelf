@@ -7,7 +7,7 @@ export default function Nav() {
 
   const handleSearch = (event) => {
     const searchText = event.target.value;
-    searchGame(event, searchText);
+    (searchGame(event, searchText));
   }
 
   return (
