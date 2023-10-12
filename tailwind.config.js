@@ -14,6 +14,8 @@ module.exports = {
       'light-green': '#b4cfb0c4',
       'logo-color': '#263330',
       'text-color': '#384541',
+      'action-btn': '#dcd2bf',
+      'action-btn-hover': '#dbcaa9',
     },
     extend: {
       borderRadius: {
