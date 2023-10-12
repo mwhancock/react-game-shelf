@@ -1,6 +1,6 @@
 
-const getHotIds = async () => {
-  const hotlist = await fetch("https://boardgamegeek.com/xmlapi2/hot?type=boardgame")
+const getGameIds = async (params) => {
+  const hotlist = await fetch(`https://boardgamegeek.com/xmlapi2/${params}?type=boardgame`)
     .then((res) =>  res.text())
     .then((data) => {
       const parser = new DOMParser();
@@ -39,4 +39,4 @@ const getGameDetails = async (gameID) => {
     };
   
 
-export { getHotIds, getGameDetails };
+export { getGameIds, getGameDetails };

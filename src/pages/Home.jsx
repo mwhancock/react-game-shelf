@@ -1,24 +1,15 @@
-import { Gallery, Library, } from "../components/home"
+import { Gallery, Library, SearchResults } from "../components/home"
 
 export default function Home() {
     return (
         <>
             <div className="flex flex-col justify-center">
                 <section id="home" className="">
-                    <section id="result_content" className="hidden">
-                        <div className="">
-                            <div>
-                                <h2>Search Results</h2>
-                            </div>
-                            <hr />
-                            <button id="close-search" className="">X</button>
-                        </div>
-                        <section id="search_results" className=""></section>
-                    </section>
-                </section>
-            
+                <SearchResults />    
                 <Gallery />
                 <Library />
+                </section>
+            
             </div>
         </>
     )
